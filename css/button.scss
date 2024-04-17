@@ -1,0 +1,65 @@
+// order: 5
+
+body,
+.body.theme--light.v-application {
+    // buttons design for vuetify v-btn component
+    .Btn {
+        border-radius: 4px;
+        text-transform: initial;
+        white-space: normal;
+
+        .v-btn__content {
+            width: 100%;
+            justify-content: center;
+            grid-gap: 10px;
+
+            span {
+                color: var(--text_dark);
+                font-size: var(--font_md_lg);
+                font-weight: 600;
+                display: block;
+            }
+        }
+
+        // addons classes
+        &.noBefore {
+            &::before {
+                display: none;
+            }
+        }
+        &.border10 {
+            border-radius: 10px;
+        }
+        &.dashed {
+            border-style: dashed;
+        }
+        &.pill {
+            border-radius: 44px;
+        }
+        &.moveRight {
+            &:is(:hover, :focus) {
+                svg {
+                    transform: translateX(10px);
+                }
+            }
+        }
+        &.spaceBetween {
+            .v-btn__content {
+                justify-content: space-between !important;
+            }
+        }
+
+        // disabled
+        &:disabled,
+        &.v-btn--disabled {
+            background-color: var(--border3) !important;
+            border-color: transparent !important;
+
+            .v-btn__content {
+                span {
+                    color: var(--text_dark) !important;
+                }
+            }
+        }
+    }
+}

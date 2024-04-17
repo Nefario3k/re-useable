@@ -1,0 +1,40 @@
+// order: 7
+
+@media screen and (max-width: 1260px) {
+    body,
+    .body.theme--light.v-application {
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body,
+    .body.theme--light.v-application {
+    }
+}
+
+@media screen and (max-width: 959px) {
+    body,
+    .body.theme--light.v-application {
+    }
+}
+
+@media screen and (max-width: 759px) {
+    body,
+    .body.theme--light.v-application {
+    }
+}
+
+@media screen and (max-width: 599px) {
+    body,
+    .body.theme--light.v-application {
+        // footer
+        .TableFooterDesign {
+            flex-direction: column;
+
+            .right__section {
+                flex-direction: column;
+                grid-gap: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,252 @@
+// order: 4
+
+// input styles
+body,
+.body.theme--light.v-application {
+    // number inputs
+    /* for other browsers  */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* for firefox  */
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    // inputs
+    .input_field {
+        height: 5rem;
+        width: 100%;
+        outline: none;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background-color: var(--text_light);
+        color: var(--text_dark);
+        padding: 10px 16px;
+        font-weight: 500;
+        font-size: var(--font_md_lg);
+        margin: 0px;
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: var(--font_md_lg);
+            color: var(--border);
+        }
+    }
+
+    textarea {
+        height: 15.3rem !important;
+        resize: none;
+    }
+
+    // select
+    .select_field {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 5rem;
+        outline: none;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        color: var(--text_dark);
+        padding: 10px 16px;
+        font-weight: 500;
+        font-size: var(--font_md_lg);
+        margin: 0px;
+        padding-right: 30px;
+        background: var(--text_light) url("/svgs/arrow_down.svg") 95% center no-repeat;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-transform: capitalize;
+
+        option {
+            background-color: var(--text_light);
+            color: var(--text_dark);
+            text-transform: capitalize;
+        }
+    }
+
+    // input label
+    .input_label {
+        display: block;
+        font-weight: 400;
+        font-size: var(--font_md_lg);
+        color: var(--text_dark);
+        margin-bottom: 6px;
+        max-width: max-content;
+
+        span {
+            color: var(--border);
+            font-style: normal;
+        }
+    }
+
+    // input with hovering side icons and/or labels
+    .itemInput {
+        overflow: hidden;
+
+        .input_field {
+            height: 4.8rem;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        .search_left_icon {
+            top: 47%;
+            transform: translateY(-50%);
+            left: 16px;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .search_right_icon {
+            top: 47%;
+            transform: translateY(-50%);
+            right: 16px;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &:has(.search_left_icon) {
+            .input_field {
+                padding-left: 5rem;
+            }
+
+            &:has(input:focus, input.hasValue) {
+                .input_field {
+                    background-color: transparent;
+                    border-color: var(--primary_color);
+                }
+
+                .search_left_icon {
+                    svg {
+                        path {
+                            stroke: var(--primary_color);
+                        }
+                    }
+                }
+            }
+        }
+
+        &:has(.search_right_icon) {
+            .input_field {
+                padding-right: 5rem;
+            }
+
+            &:has(input:focus, input.hasValue) {
+                .input_field {
+                    background-color: transparent;
+                }
+
+                .search_right_icon {
+                    svg {
+                        path {
+                            stroke: var(--primary_color);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.searcher_wrapper {
+            color: var(--bg_dark);
+
+            .input_field {
+                border-radius: 40px;
+                border: 1px solid var(--bg_dark);
+                background-color: var(--bg_dark);
+                color: var(--text_dark2);
+                font-size: var(--font_md);
+
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: var(--font_md);
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    // focus styles
+    .input_field,
+    .select_field {
+        &:focus,
+        &.hasValue {
+            border-color: var(--primary_color);
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:disabled {
+            background-color: var(--bg_dark);
+            color: var(--border);
+        }
+    }
+
+    // input__checkBok from vuetify
+    .input__checkBok {
+        i {
+            color: var(--text-dark);
+        }
+
+        .v-input__control {
+            .v-input__slot {
+                .v-input--selection-controls__input {
+                    width: 2rem;
+                    height: 2rem;
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+
+                &:not(:has(label)) {
+                    .v-input--selection-controls__input {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &.inner {
+            .v-input__control {
+                .v-input__slot {
+                    .v-input--selection-controls__input {
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 8px;
+
+                        i {
+                            color: var(--text_dark2);
+                            font-size: 2rem;
+                        }
+                    }
+
+                    label {
+                        color: var(--text_dark2);
+                        display: block;
+                        font-size: var(--font_md);
+
+                        &::first-letter {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

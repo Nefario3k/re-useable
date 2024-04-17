@@ -1,0 +1,42 @@
+// order: 1
+
+:root {
+    --primary_color: #f36223;
+
+    // text
+    --text_dark: #050505;
+
+    // randoms
+    --danger_color: #ff0000;
+    --green: #16bf5e;
+
+    // background
+    --bg_dark: #f7f6f6;
+
+    //  overlay
+    --scrim: #05050540;
+    --scrim2: #fce3d980;
+
+    // border
+    --border: #bdcccc;
+
+    // fonts
+    --font_sm: 1.2rem;
+    --font_md: 1.4rem;
+    --font_md_lg: 1.6rem;
+    --font_lg: 1.8rem;
+    --font_h2: 2rem;
+    --font_h1: 2.4rem;
+    --font_header: 3rem;
+    --font_header2: 4rem;
+    --font_header3: 4.8rem;
+    --font_main_header: 8rem;
+
+    // font reduction to fit 1rem to 10px
+    font-size: 62.5%;
+}
+// define font
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Variable.ttf") format("truetype");
+}

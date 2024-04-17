@@ -1,0 +1,29 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="38"
+    height="38"
+    viewBox="0 0 38 38"
+    fill="none"
+  >
+    <circle opacity="0.1" cx="19" cy="19" r="19" fill="white" />
+    <g clip-path="url(#clip0_313_7144)">
+      <path
+        d="M21 20.5H23.5L24.5 16.5H21V14.5C21 13.47 21 12.5 23 12.5H24.5V9.14C24.174 9.097 22.943 9 21.643 9C18.928 9 17 10.657 17 13.7V16.5H14V20.5H17V29H21V20.5Z"
+        fill="white"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_313_7144">
+        <rect width="24" height="24" fill="white" transform="translate(7 7)" />
+      </clipPath>
+    </defs>
+  </svg>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss" scoped>
+</style>

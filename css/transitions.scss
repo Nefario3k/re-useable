@@ -1,0 +1,88 @@
+// order: 6
+
+body,
+.body.theme--light.v-application {
+    // transition classes
+    .transIn {
+        animation: transIn 0.3s ease-in-out;
+    }
+    .transOut {
+        animation: transOut 0.3s ease-in-out;
+    }
+    .transInLong {
+        animation: transIn 0.5s ease-in-out;
+    }
+    .transLeft {
+        animation: transLeft 0.3s ease-in-out;
+    }
+    .transRight {
+        animation: transRight 0.3s ease-in-out;
+    }
+
+    // key frames
+    @keyframes transIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes transOut {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes transLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes transRight {
+        from {
+            opacity: 0;
+            transform: translateX(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes rotateBackground {
+        from {
+            transform: translateX(-50%) rotate(0deg);
+        }
+
+        to {
+            transform: translateX(-50%) rotate(360deg);
+        }
+    }
+    @keyframes bobbing {
+        0%,
+        100% {
+            transform: translateY(0);
+            /* Start and end position - no vertical change */
+        }
+
+        50% {
+            transform: translateY(-10px);
+            /* Middle position - moving up */
+        }
+    }
+}

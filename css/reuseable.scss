@@ -1,0 +1,217 @@
+// order: 3
+
+// reusables
+body,
+.body.theme--light.v-application {
+    // toast styles
+    .statusWrapper {
+        display: flex;
+        align-items: center;
+        grid-gap: 20px;
+        width: 100%;
+        min-width: 17rem;
+        max-width: 52.2rem !important;
+        padding: 8px 22px 8px 16px;
+        border-radius: 10px;
+        margin-top: 24px;
+        transition: all 0.45s ease-in-out;
+
+        &.borderstyled {
+            border-bottom-width: 3px;
+            border-bottom-style: inset;
+        }
+
+        & > * {
+            flex: auto;
+        }
+
+        .status__text {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 1px;
+            height: auto;
+            max-width: 37rem;
+
+            p {
+                font-weight: 600;
+                font-size: var(--font_sm);
+                margin-bottom: 0;
+                text-transform: capitalize;
+            }
+
+            span {
+                font-weight: 400;
+                display: block;
+                font-size: var(--font_sm);
+
+                &::first-letter {
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        .iconCenter {
+            svg {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        .closeBtn {
+            padding: 0 !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            box-sizing: border-box;
+            display: block;
+            width: max-content;
+            height: max-content;
+
+            svg {
+                width: var(--font_h4);
+                height: var(--font_h4);
+            }
+
+            &:hover {
+                svg path {
+                    fill: var(--danger_color);
+                }
+            }
+
+            &.danger,
+            &.check {
+                svg path {
+                    fill: #fff !important;
+                }
+            }
+
+            &.info {
+                background-color: transparent !important;
+
+                svg path {
+                    fill: var(--danger_color) !important;
+                }
+            }
+        }
+
+        * {
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+    }
+
+    // status text design
+    .errorText {
+        text-align: right;
+        display: block;
+        font-weight: 500 !important;
+        font-size: 1.1rem !important;
+        margin-top: 3px;
+        color: var(--danger_color) !important;
+    }
+    .successText {
+        text-align: right;
+        display: block;
+        font-weight: 500 !important;
+        font-size: 1.1rem !important;
+        margin-top: 3px;
+        color: var(--green) !important;
+    }
+
+    // font sizes
+    .f12 {
+        font-size: var(--font_sm) !important;
+    }
+
+    .f14 {
+        font-size: var(--font_md) !important;
+    }
+
+    .f16 {
+        font-size: var(--font_md_lg) !important;
+    }
+
+    .f18 {
+        font-size: var(--font_lg) !important;
+    }
+
+    .f20 {
+        font-size: var(--font_h2) !important;
+    }
+
+    // structure
+    .h-mc {
+        height: max-content !important;
+    }
+    .w-mc {
+        width: max-content !important;
+    }
+    .mw-mc {
+        max-width: max-content !important;
+    }
+    .minw-mc {
+        min-width: max-content !important;
+    }
+
+    // flex
+    .flex_center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex_between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .align_auto {
+        display: flex;
+        align-items: center;
+        grid-gap: 24px;
+        width: 100%;
+
+        & > * {
+            width: 100%;
+            flex: auto !important;
+        }
+    }
+    .justify_auto {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 24px;
+        width: 100%;
+
+        & > * {
+            height: 100%;
+            flex: auto !important;
+        }
+    }
+    .flex-auto {
+        flex: auto;
+    }
+
+    // positioning
+    .relative {
+        position: relative !important;
+    }
+    .absolute {
+        position: absolute !important;
+    }
+    .fixed {
+        position: fixed;
+    }
+    // text formatting
+    .capital {
+        text-transform: capitalize;
+    }
+    .upperCase {
+        text-transform: uppercase;
+    }
+    .clamp {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 1 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+}
