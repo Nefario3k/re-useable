@@ -110,8 +110,8 @@ export default (inject) => {
     }
     return num;
   });
-  // format token for electricity payment or numbers
-  inject("formatToken", (inputString, mod = 4) => {
+  //  token for electricity payment or numbers
+  inject("Token", (inputString, mod = 4) => {
     if (!inputString) return inputString;
     // Split the string into an array of characters
     const characters = inputString.trim().split("");
@@ -127,7 +127,7 @@ export default (inject) => {
     return characters.join("");
   });
 
-  ////////// TIME & DATE FORMATTING SECTION //////////
+  ////////// TIME & DATE TING SECTION //////////
 
   // get past date
   inject("getPastDate", (dateString, num = null) => {
@@ -138,7 +138,7 @@ export default (inject) => {
     // Subtract requested amount in days
     date.setDate(date.getDate() - val);
 
-    // Format the date as "yyyy-mm-dd"
+    //  the date as "yyyy-mm-dd"
     let year = date.getFullYear();
     let month = (1 + date.getMonth()).toString().padStart(2, "0");
     let day = date.getDate().toString().padStart(2, "0");
@@ -336,7 +336,7 @@ export default (inject) => {
 
   // format currency with type
   inject("formatCurrency", (num, formatType = "NGN") => {
-    if (num === null) return "Not available";
+    if (num === null || num === undefined || num === "") return 0;
     const formatter = new Intl.NumberFormat("en-NG", {
       style: "currency",
       currency: formatType,
@@ -349,7 +349,7 @@ export default (inject) => {
 
   // format number
   inject("formatNumber", (num) => {
-    if (num === null || num === undefined || num === "") return "Not available";
+    if (num === null || num === undefined || num === "") return 0;
     const formatter = num.toLocaleString("en-US", {
       style: "decimal",
     });
